@@ -14,7 +14,7 @@ interface AlertDialogProps
 const AlertDialog = React.forwardRef<
   React.ElementRef<typeof AlertDialogPrimitive.Root>,
   AlertDialogProps
->(({ ...props }, ref) => (
+>(({ ...props }) => (
   // Remove ref from here as AlertDialogPrimitive.Root doesn't directly accept it
   <AlertDialogPrimitive.Root data-slot="alert-dialog" {...props} />
 ));
@@ -165,7 +165,9 @@ AlertDialogTitle.displayName = AlertDialogPrimitive.Title.displayName;
  * -------------------------------------------------------------------------- */
 
 interface AlertDialogDescriptionProps
-  extends React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive.Description> {}
+  extends React.ComponentPropsWithoutRef<
+    typeof AlertDialogPrimitive.Description
+  > {}
 
 const AlertDialogDescription = React.forwardRef<
   React.ElementRef<typeof AlertDialogPrimitive.Description>,
@@ -179,7 +181,8 @@ const AlertDialogDescription = React.forwardRef<
   />
 ));
 
-AlertDialogDescription.displayName = AlertDialogPrimitive.Description.displayName;
+AlertDialogDescription.displayName =
+  AlertDialogPrimitive.Description.displayName;
 
 /* -----------------------------------------------------------------------------
  * Component: AlertDialogAction
