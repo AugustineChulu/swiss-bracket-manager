@@ -5,12 +5,13 @@ import tailwindcss from "@tailwindcss/vite"
 
 // https://vitejs.dev/config/
 export default defineConfig(() => {
+  const projectName = 'swiss-bracket-manager';
   const outDir = process.env.GITHUB_ACTIONS
     ? "dist"
-    : `dist/swiss-bracket-manager`;
+    : `dist/${projectName}`;
 
   return {
-    base: "/swiss-bracket-manager/",
+    base: `/${projectName}/`,
     build: { outDir },
     plugins: [react(), tailwindcss()],
     resolve: {
