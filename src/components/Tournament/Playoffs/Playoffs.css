@@ -1,0 +1,33 @@
+/* #playoffs > .bracket > .playoffs_sub_bracket::before, 
+#playoffs > .bracket > .playoffs_sub_bracket::after {
+    position: absolute;
+    z-index: -1;
+    top: 61.5%;
+    transform: translateY(-50%);
+    content: "";
+    background-color: #ccc;
+    height: 2px;
+    width: 2rem;
+}
+
+#playoffs > .bracket > .playoffs_sub_bracket::before{ right: 100%; }
+#playoffs > .bracket:nth-child(1) > .playoffs_sub_bracket:nth-child(2)::before{ right: unset; left: 112%; top: 111%; width: 7rem; transform: rotate(90deg); }
+#playoffs > .bracket:nth-child(1) > .playoffs_sub_bracket:nth-child(5)::before{ right: unset; left: 112%; top: 10%; width: 7rem; transform: rotate(90deg); }
+#playoffs > .bracket:nth-child(2) > .playoffs_sub_bracket:nth-child(2)::before{ top: unset; bottom: 15%; }
+#playoffs > .bracket:nth-child(2) > .playoffs_sub_bracket:nth-child(3)::before{ top: 40%;}
+#playoffs > .bracket:nth-child(1) > .playoffs_sub_bracket:nth-child(3)::before{ right: unset; left: 108%; top: 72%; width: 1.5rem; transform: rotate(90deg); }
+#playoffs > .bracket:nth-child(1) > .playoffs_sub_bracket:nth-child(4)::before{ right: unset; left: 108%; top: 49%; width: 1.5rem; transform: rotate(90deg); }
+#playoffs > .bracket:nth-child(3) > .playoffs_sub_bracket:nth-child(2)::before{ right: 72%; top: -11%; width: 6rem; transform: rotate(90deg); }
+#playoffs > .bracket:nth-child(3) > .playoffs_sub_bracket:nth-child(3)::before{ right: 72%; top: 133%; width: 6rem; transform: rotate(90deg); }
+
+#playoffs > .bracket > .playoffs_sub_bracket::after{ left: 100%; }
+#playoffs > .bracket:nth-child(1) > .playoffs_sub_bracket:nth-child(2)::after,
+#playoffs > .bracket:nth-child(1) > .playoffs_sub_bracket:nth-child(5)::after{ width: 24.2rem; }
+#playoffs > .bracket:nth-child(2) > .playoffs_sub_bracket:nth-child(2)::after{ left: 88%; top: 110%; width: 8rem; transform: rotate(57deg); }
+#playoffs > .bracket:nth-child(2) > .playoffs_sub_bracket:nth-child(3)::after{ left: 88%; top: 12%; width: 8rem; transform: rotate(-57deg); }
+#playoffs > .bracket:nth-child(4) > .playoffs_sub_bracket:nth-child(2)::after{ left: -40%; top: 60.5%; width: 8rem; transform: rotate(90deg); } */
+
+#bg_graphics{
+  position: absolute;
+  inset: 0;
+}

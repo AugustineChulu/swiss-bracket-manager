@@ -1,0 +1,57 @@
+#content {
+  position: relative;
+  /* line-height: 160%; */
+  overflow: auto;
+  background-color: var(--background);
+}
+
+#view_window {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  overflow: hidden;
+
+  transition: background-color 2s;
+}
+
+#view_wrapper {
+  height: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  opacity: 0;
+
+  transition: opacity 1s, transform 1s;
+}
+
+#view_wrapper.loaded {
+  opacity: 1;
+}
+
+#view_wrapper > div {
+  flex: 1 0 100%;
+
+  overflow-x: auto;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.page_header{
+  position: absolute;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  line-height: 350%;
+}
+
+.page_header > h1{
+  font-size: 4em;
+  /* background-color: red; */
+}
+
+.page_header > h2{
+  font-size: 2em;
+  /* background-color: blue; */
+}

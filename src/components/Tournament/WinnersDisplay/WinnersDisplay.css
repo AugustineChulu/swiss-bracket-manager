@@ -1,0 +1,29 @@
+#winner_details_wrapper {
+  text-align: center;
+  display: grid;
+  grid-auto-flow: row;
+  justify-items: center;
+}
+
+#winner_details_wrapper > div:last-child {
+  font-family: Bourgeois-Heavy;
+  font-size: 3em;
+}
+
+.winner_avatar {
+  height: 4rem;
+  width: 4rem;
+  margin-bottom: 1rem;
+}
+
+.winner_name {
+  font-size: 1.3em;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ffbf00;
+  text-shadow: 0 0 1.5rem #ffd700;
+}
+
+.champions_title {
+  text-shadow: 0 0 0.5rem #ffd700;
+}

@@ -1,0 +1,76 @@
+#manager_tabs{
+    --tab_titles_height: 2.5rem;
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    /* background-color: red; */
+}
+
+#tab_titles{
+    height: var(--tab_titles_height);
+}
+
+.tab_content{
+    height: calc(100% - var(--tab_titles_height));
+    overflow-y: auto;
+    padding-right: 0.5rem;
+}
+
+#edit_tournament_info_form > div:first-child{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+#edit_tournament_info_form input:not(input[type="submit"]){
+    background-color: var(--input);
+    /* color: var(--background); */
+}
+
+#edit_tournament_info_form input[type="file"]{
+    color: var(--gray_tint) !important;
+    /* background-color: #333 !important; */
+}
+
+#edit_tournament_info_form input:not(input[type="submit"]):invalid{
+    box-shadow: 0 -0.1rem 0.3rem 0 #ff5e5e inset;
+}
+
+#edit_tournament_info_form input:not(input[type="submit"]):valid{
+    box-shadow: 0 -0.1rem 0.3rem 0 #58ff71 inset;
+}
+
+#edit_tournament_info_form input:not(input[required]):valid{
+    box-shadow: 0 -0.1rem 0.3rem 0 #fff inset;
+}
+
+#participants_wrapper{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1rem;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+#participants_wrapper input:not(input[type="submit"]){
+    background-color: var(--input);
+    /* color: var(--background); */
+}
+
+#participants_wrapper input[type="file"]{
+    color: var(--gray_tint) !important;
+    /* background-color: #333 !important; */
+}
+
+#participants_wrapper input:not(input[type="submit"]):invalid{
+    box-shadow: 0 -0.1rem 0.3rem 0 #ff5e5e inset;
+}
+
+#participants_wrapper input:not(input[type="submit"]):valid{
+    box-shadow: 0 -0.1rem 0.3rem 0 #58ff71 inset;
+}
+
+#participants_wrapper input:not(input[required]):valid{
+    box-shadow: 0 -0.1rem 0.3rem 0 #fff inset;
+}

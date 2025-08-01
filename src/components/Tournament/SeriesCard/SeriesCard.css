@@ -1,0 +1,205 @@
+.swiss_series_card {
+  position: relative;
+  height: var(--min_unit);
+  font-family: Bourgeois-Bold;
+
+  transition: visibility 0.5s, opacity 0.5s;
+}
+
+.avatar_image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  padding: 0.3rem;
+}
+
+.swiss_series_card > div,
+.swiss_series_card > input {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: calc(var(--min_unit));
+  width: var(--min_unit);
+  display: grid;
+  place-items: center;
+}
+
+.swiss_series_card > input {
+  font-size: 1.1rem;
+  font-family: abel;
+}
+
+.swiss_series_card > input:not(input:disabled) {
+  border: solid 2px var(--border);
+}
+
+.swiss_series_card > input::placeholder {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.swiss_series_card > div:nth-child(1),
+.swiss_series_card > div:nth-child(5) {
+  z-index: 2;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0;
+  background-color: #ffffff11;
+  color: #fff;
+  cursor: default;
+}
+
+.swiss_series_card > div:nth-child(1) {
+  left: 0;
+  border-radius: 0.2rem 0 0 0.2rem;
+}
+
+.swiss_series_card > input:nth-child(2) {
+  left: calc(var(--min_unit));
+}
+
+.swiss_series_card > div:nth-child(3) {
+  z-index: 3;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background-color: var(--base);
+  color: inherit;
+  font-size: 1.5rem;
+  font-family: Bourgeois-Heavy;
+}
+
+.swiss_series_card > input:nth-child(4) {
+  right: calc(var(--min_unit));
+}
+
+.swiss_series_card > div:nth-child(5) {
+  right: 0;
+  border-radius: 0 0.2rem 0.2rem 0;
+}
+
+.seed_list {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  gap: 0.3rem;
+  font-family: Bourgeois-Bold;
+}
+
+.seed_list > div {
+  position: relative;
+  background-color: #00000044;
+  color: #fff;
+  height: calc(var(--min_unit));
+  width: var(--min_unit);
+  border-radius: 0.5rem;
+  cursor: default;
+
+  display: grid;
+  place-items: center;
+
+  transition: visibility 0.5s, opacity 0.5s;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.playoffs_series_card {
+  height: 100%;
+  display: grid;
+  grid-template-columns: var(--min_unit) 1fr var(--min_unit);
+  grid-template-rows: var(--min_unit) 1fr var(--min_unit);
+  font-family: Bourgeois-Bold;
+}
+
+.playoffs_series_card > div {
+  position: relative;
+  display: grid;
+  place-items: center;
+  color: var(--background);
+}
+
+.playoffs_series_card > input {
+  display: grid;
+  place-items: center;
+  font-size: 1.1rem;
+  z-index: 2;
+  background-color: #fff;
+
+  transition: background-color 0.5s;
+}
+
+.playoffs_series_card > input:disabled {
+  background-color: var(--gray_tint);
+  color: var(--base);
+}
+
+.playoffs_series_card > input::placeholder {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.playoffs_series_card > div:nth-child(1) {
+  grid-column: 1;
+  grid-row: 1;
+  background-color: #fff;
+  border-radius: calc(0.5rem - 0.1rem) 0 0 0.3rem;
+  border: solid 2px #fff;
+  border-right: none;
+}
+
+.playoffs_series_card > input:nth-child(2) {
+  grid-column: 3;
+  grid-row: 1;
+  border-radius: 0 calc(0.5rem - 0.1rem) 0.3rem 0;
+  color: #000;
+  border: solid 2px #fff;
+  border-left: none;
+}
+
+.playoffs_series_card > div:nth-child(3) {
+  grid-column: 2;
+  grid-row: 1;
+  color: #fff;
+  background-color: var(--secondary_blue);
+  border: solid 2px #fff;
+  /* border-left: none;
+  border-right: none; */
+}
+
+.playoffs_series_card > div:nth-child(4) {
+  grid-column: 2;
+  grid-row: 3;
+  color: #fff;
+  background-color: var(--secondary_orange);
+  border: solid 2px #fff;
+  /* border-left: none;
+  border-right: none; */
+}
+
+.playoffs_series_card > input:nth-child(5) {
+  grid-column: 3;
+  grid-row: 3;
+  border-radius: 0 0.3rem calc(0.5rem - 0.1rem) 0;
+  color: #000;
+  border: solid 2px #fff;
+  border-left: none;
+}
+
+.playoffs_series_card > div:nth-child(6) {
+  grid-column: 1;
+  grid-row: 3;
+  background-color: #fff;
+  border: solid 2px #fff;
+  border-right: none;
+  border-radius: 0.3rem 0 0 calc(0.5rem - 0.1rem);
+}

@@ -1,0 +1,90 @@
+#sidebar_wrapper{
+    position: relative;
+    grid-column: 1;
+    grid-row: 1;
+    height: 100% - 0.8rem;
+    width: calc(var(--min_unit) + 12rem);
+    box-sizing: border-box;
+    padding: 1rem;
+    margin: 0.4rem;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+    justify-content: start;
+    align-items: center;
+    background-color: var(--base);
+    border-radius: var(--rounded1half);
+}
+
+#sidebar_wrapper::before{
+    position: absolute;
+    content: '';
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    height: var(--min_unit);
+    width: var(--min_unit);
+    background-image: url('/SVG/swiss-bracket-logo.svg');
+    background-size: 90%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#sidebar_wrapper > button:nth-child(1){
+    margin-top: 6rem;
+}
+
+#sidebar_wrapper > button{
+    position: relative;
+    z-index: 1;
+    height: calc(var(--min_unit) + 0.5rem);
+    min-width: calc(var(--min_unit) + 0.5rem);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--rounded1half);
+    color: #fff;
+    border-style: solid;
+    border-width: 2px;
+    border-color: transparent;
+
+    transition: border-color 0.5s;
+}
+
+#sidebar_wrapper > button > span{
+    font-size: 0.9em;
+    padding-left: 0.5rem;
+}
+
+#sidebar_wrapper > button::before{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset: -2px;
+    border-radius: var(--rounded1half);
+    opacity: 0;
+    background-color: #ffffff66;
+    background-image: url(/SVG/noise.svg);
+    background-blend-mode: lighten;
+    box-shadow: 1px 0 1px 1px #ffffff inset;
+
+    transition: opacity 1s;
+}
+
+#sidebar_wrapper > button.active > span{
+    font-weight: bold;
+}
+
+#sidebar_wrapper > button.active::before{
+    opacity: 0.4;
+}
+
+#sidebar_wrapper > button[title="Settings"]{
+    margin-top: auto;
+}
+
+#sidebar_wrapper > button:not([class~="active"]):hover,
+#sidebar_wrapper > button:not([class~="active"]):focus{
+    border-color: #ffffff66;
+}

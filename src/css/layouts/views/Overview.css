@@ -1,0 +1,32 @@
+rtt_title_bar.hide{
+    /* visibility: hidden;
+    opacity: 0; */
+    display: none;
+}
+
+#tournament_cards_wrapper{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+#tournament_cards_wrapper.static_height{
+    flex: 0 0 auto;
+}
+
+#no_tournaments_indicator{
+    align-self: center;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    color: var(--gray_tint);
+    font-size: 3em;
+    text-align: center;
+}
+
+#no_tournaments_indicator > a{
+    font-weight: bold;
+    font-size: 0.5em;
+    margin-top: 1rem;
+}

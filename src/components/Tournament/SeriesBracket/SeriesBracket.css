@@ -1,0 +1,141 @@
+.bracket {
+  --blue_gradient: linear-gradient(
+    to right,
+    var(--secondary_blue),
+    rgb(82, 124, 240)
+  );
+  --orange_gradient: linear-gradient(
+    to right,
+    var(--secondary_orange),
+    rgb(255, 163, 59)
+  );
+  --green_gradient: linear-gradient(
+    to right,
+    var(--secondary_green),
+    rgb(49, 216, 99)
+  );
+  --red_gradient: linear-gradient(to right, var(--secondary_red), rgb(255, 72, 72));
+
+  flex: 0 0 auto;
+  position: relative;
+  padding: 0 1.3rem;
+  margin-top: 4rem;
+  row-gap: 1rem;
+
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.bracket:hover,
+.bracket:focus-within {
+  outline: none;
+}
+
+.bracket:hover > div:first-child,
+.bracket:focus-within > div:first-child {
+  visibility: visible;
+  opacity: 1;
+}
+
+.bracket:hover > div:first-child > div,
+.bracket:focus-within > div:first-child > div {
+  box-shadow: 0 0 0.5rem #fff;
+}
+
+.bracket.swiss:hover > div:not(:first-child),
+.bracket.swiss:focus-within > div:not(:first-child) {
+  box-shadow: 0 0 0.5rem 0 #fff;
+}
+
+.swiss_sub_bracket {
+  position: relative;
+  border-radius: 0.5rem;
+
+  transition: box-shadow 0.5s;
+}
+
+.swiss_sub_bracket > div:nth-child(1) {
+  text-align: center;
+  border: solid 2px #b8b8b8;
+  border-bottom: none;
+  border-radius: 0.5rem 0.5rem 0 0;
+  font-family: Bourgeois-Heavy;
+}
+
+.swiss_sub_bracket.initial > div:nth-child(1) {
+  background: var(--blue_gradient);
+}
+
+.swiss_sub_bracket.intermediate > div:nth-child(1) {
+  background: var(--orange_gradient);
+}
+
+.swiss_sub_bracket.qualifier > div:nth-child(1) {
+  background: var(--green_gradient);
+}
+
+.swiss_sub_bracket.elimination > div:nth-child(1) {
+  background: var(--red_gradient);
+}
+
+.swiss_sub_bracket > div:nth-child(2) {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 0.3rem;
+  width: calc(var(--min_unit) * 3 + 1rem);
+  padding: 0.2rem;
+  background-color: var(--base);
+  border: solid 2px #b8b8b8;
+  border-radius: 0 0 0.5rem 0.5rem;
+
+  transition: width 0.5s;
+}
+
+.swiss_sub_bracket.edit_mode > div:nth-child(2) {
+  width: calc(var(--min_unit) * 5 + 1rem) !important;
+}
+
+.swiss_sub_bracket.initial > div:nth-child(2) .versus_txt{
+  color: var(--secondary_blue);
+}
+
+.swiss_sub_bracket.intermediate > div:nth-child(2) .versus_txt{
+  color: var(--secondary_orange);
+}
+
+.swiss_sub_bracket.qualifier > div:nth-child(2) .versus_txt{
+  color: var(--secondary_green);
+}
+
+.swiss_sub_bracket.elimination > div:nth-child(2) .versus_txt{
+  color: var(--secondary_red);
+}
+
+.swiss_sub_bracket#s4-win > div:nth-child(2),
+.swiss_sub_bracket#s6-win > div:nth-child(2) {
+  background: var(--green_gradient);
+}
+
+.swiss_sub_bracket#s4-elim > div:nth-child(2),
+.swiss_sub_bracket#s5-elim > div:nth-child(2),
+.swiss_sub_bracket#s6-elim > div:nth-child(2) {
+  background: var(--red_gradient);
+}
+
+.swiss_sub_bracket#s5-tiebreaker > div:nth-child(2) {
+  background: var(--orange_gradient);
+}
+
+.playoffs_sub_bracket {
+  position: relative;
+}
+
+.playoffs_sub_bracket > div:nth-child(1) {
+  font-family: Bourgeois-Heavy;
+}
+
+.playoffs_sub_bracket > div:nth-child(2) {
+  height: calc(var(--min_unit) * 2 + 0.2rem);
+  width: calc(var(--min_unit) * 6);
+}

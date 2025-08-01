@@ -1,0 +1,51 @@
+#new_tournament_form input:not(input[type="submit"]){
+    background-color: var(--input);
+    /* color: var(--background); */
+}
+
+#new_tournament_form input[type="file"]{
+    color: var(--gray_tint) !important;
+}
+
+#new_tournament_form input:not(input[type="submit"]):invalid{
+    box-shadow: 0 -0.1rem 0.3rem 0 #ff5e5e inset;
+}
+
+#new_tournament_form input:not(input[type="submit"]):valid{
+    box-shadow: 0 -0.1rem 0.3rem 0 #58ff71 inset;
+}
+
+#new_tournament_form input:not(input[required]):valid{
+    box-shadow: 0 -0.1rem 0.3rem 0 #fff inset;
+}
+
+#new_tournament_form > div:nth-child(1){
+    padding: 2rem 1rem;
+    border-bottom: solid 1px var(--border);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+#new_tournament_form > div:nth-child(2){
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1rem;
+    justify-content: center;
+    padding: 2rem 0;
+    border-bottom: solid 1px var(--border);
+} 
+
+#new_tournament_form > div:nth-child(3){
+    display: flex;
+    justify-content: center;
+}
+
+#new_tournament_form > div:nth-child(3) > div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem 0 2rem 0;
+}

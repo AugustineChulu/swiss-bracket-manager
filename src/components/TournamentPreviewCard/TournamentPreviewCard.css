@@ -1,0 +1,99 @@
+.tournament_preview_card {
+  position: relative;
+  height: 18rem;
+  width: 18rem;
+  background-color: var(--foreground);
+  cursor: pointer;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  grid-template-columns: 1fr;
+  padding: 0.3rem;
+  border-radius: 2rem;
+  /* box-shadow: 0 0 0.2rem 0 #000000; */
+
+  transition: transform 0.5s;
+}
+
+.tournament_preview_card:hover #action_btns_wrapper,
+.tournament_preview_card:focus-within #action_btns_wrapper {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tournament_preview_card:hover #top_card > div:first-child,
+.tournament_preview_card:focus-within #top_card > div:first-child {
+  -webkit-filter: blur(3px);
+  filter: blur(3px);
+  background-color: #333;
+}
+
+.tournament_preview_card:hover #top_card > img,
+.tournament_preview_card:focus-within #top_card > img {
+  -webkit-filter: brightness(25%);
+  filter: brightness(25%);
+}
+
+.tournament_preview_card:hover #bottom_card > p,
+.tournament_preview_card:focus-within #bottom_card > p {
+  height: 1.2rem;
+  overflow: hidden;
+}
+
+#top_card {
+  position: relative;
+  border-radius: 1.8rem;
+  overflow: hidden;
+}
+
+#top_card > img {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: auto;
+  object-fit: cover;
+  object-position: center;
+  -webkit-filter: brightness(100%);
+  filter: brightness(100%);
+
+  transition: filter 1s, background-color 1s;
+}
+
+#top_card > img::before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background-color: var(--muted);
+  -webkit-filter: blur(1px);
+  filter: blur(1px);
+  background-image: url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 16c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zm33.414-6l5.95-5.95L45.95.636 40 6.586 34.05.636 32.636 2.05 38.586 8l-5.95 5.95 1.414 1.414L40 9.414l5.95 5.95 1.414-1.414L41.414 8zM40 48c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zM9.414 40l5.95-5.95-1.414-1.414L8 38.586l-5.95-5.95L.636 34.05 6.586 40l-5.95 5.95 1.414 1.414L8 41.414l5.95 5.95 1.414-1.414L9.414 40z' fill='%239C92AC' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+#action_btns_wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  display: flex;
+  column-gap: 0.4rem;
+  visibility: hidden;
+  opacity: 0;
+
+  transition: visibility 1s, opacity 1s;
+}
+
+#bottom_card {
+  color: var(--background);
+  display: grid;
+  grid-auto-flow: row;
+  align-content: center;
+  align-items: center;
+  justify-items: center;
+  padding: 0.5rem;
+}
+
+#bottom_card > p {
+  height: 0;
+  overflow: hidden;
+
+  transition: height 0.5s;
+}

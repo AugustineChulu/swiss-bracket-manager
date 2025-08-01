@@ -1,0 +1,94 @@
+<!ELEMENT svg (defs?, g*, path*, circle*, rect*, filter*)>
+<!ATTLIST svg
+    xmlns CDATA #IMPLIED
+    viewBox CDATA #IMPLIED
+    width CDATA #IMPLIED
+    height CDATA #IMPLIED
+    version CDATA #IMPLIED
+    xmlns:xlink CDATA #IMPLIED
+    xmlns:svgjs CDATA #IMPLIED
+>
+
+<!ELEMENT defs (style*, filter*)>
+<!ELEMENT style (#PCDATA)>
+
+<!ELEMENT g (path*, circle*, rect*)>
+<!ATTLIST g
+    class CDATA #IMPLIED
+>
+
+<!ELEMENT path EMPTY>
+<!ATTLIST path
+    d CDATA #IMPLIED
+    stroke CDATA #IMPLIED
+    stroke-width CDATA #IMPLIED
+    fill CDATA #IMPLIED
+>
+
+<!ELEMENT circle EMPTY>
+<!ATTLIST circle
+    cx CDATA #IMPLIED
+    cy CDATA #IMPLIED
+    r CDATA #IMPLIED
+    stroke CDATA #IMPLIED
+    stroke-width CDATA #IMPLIED
+    fill CDATA #IMPLIED
+>
+
+<!ELEMENT rect EMPTY>
+<!ATTLIST rect
+    x CDATA #IMPLIED
+    y CDATA #IMPLIED
+    width CDATA #IMPLIED
+    height CDATA #IMPLIED
+    stroke CDATA #IMPLIED
+    stroke-width CDATA #IMPLIED
+    fill CDATA #IMPLIED
+    filter CDATA #IMPLIED
+>
+
+<!ELEMENT filter (feTurbulence*, feSpecularLighting*)>
+<!ATTLIST filter
+    id CDATA #IMPLIED
+    x CDATA #IMPLIED
+    y CDATA #IMPLIED
+    width CDATA #IMPLIED
+    height CDATA #IMPLIED
+    filterUnits CDATA #IMPLIED
+    primitiveUnits CDATA #IMPLIED
+    color-interpolation-filters CDATA #IMPLIED
+>
+
+<!ELEMENT feTurbulence EMPTY>
+<!ATTLIST feTurbulence
+    type CDATA #IMPLIED
+    baseFrequency CDATA #IMPLIED
+    numOctaves CDATA #IMPLIED
+    seed CDATA #IMPLIED
+    stitchTiles CDATA #IMPLIED
+    x CDATA #IMPLIED
+    y CDATA #IMPLIED
+    width CDATA #IMPLIED
+    height CDATA #IMPLIED
+    result CDATA #IMPLIED
+>
+
+<!ELEMENT feSpecularLighting (feDistantLight*)>
+<!ATTLIST feSpecularLighting
+    surfaceScale CDATA #IMPLIED
+    specularConstant CDATA #IMPLIED
+    specularExponent CDATA #IMPLIED
+    lighting-color CDATA #IMPLIED
+    x CDATA #IMPLIED
+    y CDATA #IMPLIED
+    width CDATA #IMPLIED
+    height CDATA #IMPLIED
+    in CDATA #IMPLIED
+    result CDATA #IMPLIED
+>
+
+<!ELEMENT feDistantLight EMPTY>
+<!ATTLIST feDistantLight
+    azimuth CDATA #IMPLIED
+    elevation CDATA #IMPLIED
+>

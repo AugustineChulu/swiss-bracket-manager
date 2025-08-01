@@ -1,0 +1,90 @@
+#app_opts_wrapper {
+  --unit: 2.5rem;
+
+  position: absolute;
+  z-index: 10;
+  top: 0.5rem;
+  left: 1rem;
+  right: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#tournament_opts_wrapper{
+  position: relative;
+  margin-left: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: transparent;
+}
+
+#tournament_opts_wrapper > *{
+  z-index: 1;
+}
+
+#tournament_opts_wrapper::before{
+  position: absolute;
+  content: '';
+  z-index: 0;
+  inset: 0;
+  border-radius: inherit;
+  opacity: 0;
+  background-color: #ffffff66;
+  background-image: url(/SVG/noise.svg);
+  background-blend-mode: screen;
+
+  transition: opacity 0.5s;
+}
+
+#tournament_opts_wrapper:hover::before,
+#tournament_opts_wrapper:focus-within::before{
+  opacity: 0.5;
+}
+
+#tournament_opts_wrapper:hover > #quick_opts_wrapper,
+#tournament_opts_wrapper:focus-within > #quick_opts_wrapper{
+  opacity: 1;
+  visibility: visible;
+}
+
+#quick_opts_wrapper {
+  opacity: 0;
+  visibility: hidden;
+  width: min-content;
+  padding: 0.3rem;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 0.5rem;
+
+  transition: visibility 0.5s, opacity 0.5s;
+}
+
+#stage_cycle_btns {
+  --blur_val: 20rem;
+
+  position: relative;
+  margin-left: auto;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 0.5rem;
+  
+  padding: 0.3rem;
+}
+
+#stage_cycle_btns > *{
+  z-index: 1;
+}
+
+#stage_cycle_btns::before{
+  position: absolute;
+  content: '';
+  z-index: 0;
+  inset: 0;
+  border-radius: inherit;
+  opacity: 0.5;
+  background-color: #ffffff66;
+  background-image: url(/SVG/noise.svg);
+  background-blend-mode: screen;
+}

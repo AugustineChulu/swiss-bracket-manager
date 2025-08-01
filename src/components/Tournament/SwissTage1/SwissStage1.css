@@ -1,0 +1,73 @@
+/* #stage1 > .bracket:not(:nth-child(1))::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background-color: #ccc;
+  width: 2px;
+}
+
+#stage1 > .bracket:nth-child(2)::before { height: 17rem; }
+#stage1 > .bracket:nth-child(3)::before { height: 27.2rem; }
+#stage1 > .bracket:nth-child(4)::before { transform: translateY(-50.3%); height: 23.5rem; }
+#stage1 > .bracket:nth-child(5)::before { transform: translateY(-50%); height: 13.6rem; } 
+#stage1 > .bracket:nth-child(6)::before { display: none; }
+
+#stage1 > .bracket > .swiss_sub_bracket::before,
+#stage1 > .bracket > .swiss_sub_bracket::after {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  content: "";
+  background-color: #ccc;
+  height: 2px;
+  width: 2rem;
+}
+
+#stage1 > .bracket > .swiss_sub_bracket::before{ right: 100%; }
+#stage1 > .bracket:nth-child(1) > .swiss_sub_bracket::before{ display: none; }
+#stage1 > .bracket:nth-child(4) > .swiss_sub_bracket:nth-child(2)::before{ top: 70%; width: 4rem } 
+#stage1 > .bracket:nth-child(4) > .swiss_sub_bracket:nth-child(5)::before{ top: unset; bottom: 70%; width: 4rem }
+#stage1 > .bracket:nth-child(5) > .swiss_sub_bracket:nth-child(2)::before, 
+#stage1 > .bracket:nth-child(5) > .swiss_sub_bracket:nth-child(4)::before{ width: 4rem }
+#stage1 > .bracket:nth-child(6) > .swiss_sub_bracket:nth-child(2)::before, 
+#stage1 > .bracket:nth-child(6) > .swiss_sub_bracket:nth-child(3)::before{ width: 4rem }
+
+#stage1 > .bracket > .swiss_sub_bracket::after{ left: 100%; }
+#stage1 > .bracket:nth-child(3) > .swiss_sub_bracket:nth-child(2)::after{ top: 70%; } 
+#stage1 > .bracket:nth-child(3) > .swiss_sub_bracket:nth-child(4)::after{ top: unset; bottom: 70%; }
+#stage1 > .bracket:nth-child(4) > .swiss_sub_bracket:nth-child(2)::after, 
+#stage1 > .bracket:nth-child(4) > .swiss_sub_bracket:nth-child(5)::after{ display: none; }
+#stage1 > .bracket:nth-child(5) > .swiss_sub_bracket::after{ display: none; }
+#stage1 > .bracket:nth-child(6) > .swiss_sub_bracket::after{ display: none; } */
+
+#bg_graphics{
+  position: absolute;
+  inset: 0;
+}
+
+/* hide empty series */
+#stage1 > .bracket > .swiss_sub_bracket > div > div.hide{
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* hide empty seeds */
+#stage1 > .bracket > .swiss_sub_bracket > div > div > div.hide{
+  visibility: hidden;
+  opacity: 0;
+}
+
+/*OPTIMIZATION FOR WIDER SCREENS ||  TABLETS */
+@media only screen and (max-width: 1000px) {
+
+}
+
+/*OPTIMIZATION FOR WIDER SCREENS ||  PHONES */
+@media only screen and (max-width: 660px) {
+}
+
+/*OPTIMIZATION FOR WIDER SCREENS ||  TINY PHONES */
+@media only screen and (max-width: 380px) {
+}
